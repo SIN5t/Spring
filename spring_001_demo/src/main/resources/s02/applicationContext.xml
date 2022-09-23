@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="cn.edu.uestc.pojo02.School" id="school">
+        <property name="name" value="电子科技大学"></property>
+        <property name="address" value="成都市"></property>
+    </bean>
+    <bean id="student" class="cn.edu.uestc.pojo02.Student">
+        <property name="name" value="张三"></property>
+        <property name="age" value="22"></property>
+
+        <!--这里的value是引用的名字，上面bean通过反射创建好了，id就是bean的名字-->
+        <property name="school" ref="school"></property>
+    </bean>
+</beans>

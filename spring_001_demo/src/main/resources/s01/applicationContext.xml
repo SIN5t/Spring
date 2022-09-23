@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="stu" class="cn.edu.uestc.pojo.Student">
+        <property name="name" value="张三"></property>
+        <property name="id" value="3456"></property>
+        <!--
+        创建学生对象，程序员是这么干的：
+        Student stu = new Student();
+        Spring 的做法是反射
+        id:创建对象的名称
+        class:创建对象的类型，通过反射机制
+
+        注意：一定要有无参的构造方法才能成功被反射创建对象！（没有写构造方法也可以，因为会有默认的，但是不可以只写有参的构造方法）
+        注意：想要修改属性值，一定要写setter方法，之后通过property去修改
+        -->
+    </bean>
+</beans>

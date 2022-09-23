@@ -1,0 +1,7 @@
+# Project exclude paths
+/spring_001_demo/target/
+/spring_002_architecture/target/
+/spring_003_architectureXml/target/
+/spring_004_annotation/target/
+/spring_005_architectureAnnotation/target/
+/spring_006_AOP/target/
