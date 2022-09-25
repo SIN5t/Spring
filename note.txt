@@ -364,7 +364,7 @@ public class MyAspect {
         return obj.toString().toUpperCase();  //改变了目标方法的返回值
     }
 }
-21.最终通知@After
+21.最终通知@After（有点儿finally的感觉）
   无论目标方法是否正常执行,最终通知的代码都会被执行.
 
 22.给切入点表达式起别名@Pointcut

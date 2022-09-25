@@ -27,6 +27,18 @@ public class MyAspect {
     @AfterReturning(value = "execution(* cn.edu.uestc.s02.*.*(..))",returning = "obj")
     public void MyAfterReturning(Object obj){
         System.out.println("afterReturning 后置函数执行成功...");
-
+        if (obj!=null){//AfterReturning对应的那个业务函数不一定有返回值的，所以判断一下
+            if (obj instanceof String){//动态代理代理多套业务，不同业务可能返回值类型不同！！！
+                String s = ((String) obj).toUpperCase();
+                System.out.println("切面方法中afterReturning 后置函数对返回值进行处理后输出" + s);
+            }
+            if(obj instanceof Student){
+                //现在想试试修改返回值
+                Student stu = (Student) obj;
+                stu.setName("李元一");
+                stu.setAge(21);
+                System.out.println("切面方法中的返回值：" + stu);
+            }
+        }
     }
 }

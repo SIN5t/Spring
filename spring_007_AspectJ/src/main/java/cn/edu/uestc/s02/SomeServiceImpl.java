@@ -12,8 +12,9 @@ public class SomeServiceImpl implements SomeServices{
         return "abcd";
     }
 
-
-    public void show() {
-
+    public Student changeRetVal(Student stu) {
+        return stu;
     }
+
+
 }
