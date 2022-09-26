@@ -12,6 +12,7 @@
         <module name="spring_006_AOP" />
         <module name="spring_007_AspectJ" />
         <module name="spring_001_demo" />
+        <module name="spring_008_ssm" />
         <module name="spring_005_architectureAnnotation" />
       </profile>
     </annotationProcessing>
