@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.uestc.mapper.AccountsMapper">
+    <!--
+        private Integer aId;
+        private String aName;
+        private String aContent;
+    -->
+    <insert id="add" parameterType="account">
+        insert into accounts values (#{aId},#{aName},#{aContent})
+    </insert>
+</mapper>

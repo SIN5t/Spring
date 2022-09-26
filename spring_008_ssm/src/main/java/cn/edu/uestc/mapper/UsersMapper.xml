@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.uestc.mapper.UsersMapper">
+    <!--
+    int insert(Users user);
+    parameterType注册了别名，注意驼峰命名
+    实体类：注意这时候value里面的占位符就要填对应的名称了，这样mybatis才能正确把类分解插入
+    private Integer uId;
+    private String uName;
+    private String uPass;
+
+    -->
+    <insert id="insert" parameterType="users" >
+        insert into users values (#{uId},#{uName},#{uPass})
+    </insert>
+
+</mapper>
